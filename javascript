@@ -1,11 +1,11 @@
 const NFTs = []
 
-function mintNFT(_name, _age, _experience, _department) {
+function mintNFT(_name, _age, _bodyshape, _skincolor) {
     const NFT = {
         "name": _name,
         "age": _age,
-        "experience": _experience,
-        "department": _department
+        "bodyshape": _bodyshape,
+        "skincolor": _skincolor
     }
     NFTs.push(NFT);
     console.log("Minted:" + _name);
@@ -15,8 +15,8 @@ function listNFTs() {
     for (let i = 0; i < NFTs.length; i++) {
         console.log("\nName: " + NFTs[i].name);
         console.log("\nAge: " + NFTs[i].age);
-        console.log("\nExperience: " + NFTs[i].experience);
-        console.log("\nDepartment: " + NFTs[i].department);
+        console.log("\nBodyshape: " + NFTs[i].bodyshape);
+        console.log("\nSkincolor: " + NFTs[i].skincolor);
     }
 }
 
@@ -24,6 +24,9 @@ function getTotalSupply() {
     console.log(NFTs.length);
 }
 
-mintNFT("Shubham", "21", "2 years", "Software Development");
+mintNFT("Shubham", "21", "Oval", "fair");
+mintNFT("Aman", "24", "Rectangle", "dark");
+mintNFT("Ayush", "27", "Triangle", "fair");
+
 listNFTs();
 getTotalSupply();
